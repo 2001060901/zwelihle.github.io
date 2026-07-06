@@ -1,6 +1,6 @@
 # Zwelihle Mbhamali — Portfolio Website
 
-🌐 **Live Site:** [https://zwelihle.github.io](https://zwelihle.github.io)
+🌐 **Live Site:** [https://2001060901.github.io/zwelihle.github.io/](https://2001060901.github.io/zwelihle.github.io/)
 
 ---
 
