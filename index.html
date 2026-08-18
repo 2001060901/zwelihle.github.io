@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Zwelihle Mbhamali — SEO Developer, Data Analyst & Web Developer based in Johannesburg. BCom MIS Graduate."/>
+<meta name="keywords" content="Zwelihle Mbhamali, SEO Developer, Web Developer, Data Analyst, Johannesburg"/>
+<meta property="og:title" content="Zwelihle Mbhamali | SEO Developer & Web Developer"/>
+<meta property="og:description" content="BCom MIS Graduate — SEO, Web Dev & Data Analytics"/>
+<meta property="og:type" content="website"/>
+<title>Zwelihle Mbhamali | SEO Developer & Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#080b10;
+  --dark:#0d1117;
+  --panel:#161b22;
+  --panel2:#1c2128;
+  --border:#30363d;
+  --border2:#21262d;
+  --muted:#484f58;
+  --gray:#8b949e;
+  --silver:#c9d1d9;
+  --white:#f0f6fc;
+  --green:#3fb950;
+  --green-dim:rgba(63,185,80,0.1);
+  --green-border:rgba(63,185,80,0.25);
+  --blue:#58a6ff;
+  --orange:#f0883e;
+  --purple:#bc8cff;
+  --font-display:'Syne',sans-serif;
+  --font-body:'Inter',sans-serif;
+  --radius:8px;
+  --transition:0.22s ease;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--black);color:var(--silver);line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-thumb{background:var(--green);border-radius:2px}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:0 6%;height:64px;
+  background:rgba(8,11,16,0.9);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border2);
+}
+.nav-logo{
+  font-family:var(--font-display);font-size:1.15rem;font-weight:800;
+  color:var(--white);letter-spacing:-0.02em;display:flex;align-items:center;gap:0.5rem;
+}
+.nav-logo-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(1.5)}}
+.nav-links{display:flex;gap:0.25rem;list-style:none}
+.nav-links a{
+  padding:0.45rem 0.9rem;border-radius:6px;
+  color:var(--gray);font-size:0.83rem;font-weight:500;
+  transition:color var(--transition),background var(--transition);
+}
+.nav-links a:hover{color:var(--white);background:var(--panel)}
+.nav-right{display:flex;align-items:center;gap:0.75rem}
+.nav-gh{
+  display:flex;align-items:center;gap:0.5rem;
+  padding:0.45rem 1rem;background:var(--panel);
+  border:1px solid var(--border);border-radius:6px;
+  color:var(--silver);font-size:0.82rem;font-weight:500;
+  transition:border-color var(--transition),color var(--transition);
+}
+.nav-gh:hover{border-color:var(--green);color:var(--white)}
+.nav-cv{
+  padding:0.45rem 1.1rem;background:var(--green);
+  color:#0d1117;border-radius:6px;font-size:0.82rem;font-weight:700;
+  transition:opacity var(--transition);
+}
+.nav-cv:hover{opacity:0.85}
+
+/* ── HERO ── */
+#home{
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  padding:9rem 6% 5rem;position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 50% at 70% 40%, rgba(63,185,80,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 20% 70%, rgba(88,166,255,0.04) 0%, transparent 55%);
+}
+.hero-grid{display:grid;grid-template-columns:1fr 400px;gap:5rem;align-items:center;max-width:1200px}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  padding:0.35rem 1rem;margin-bottom:1.8rem;
+  background:var(--green-dim);border:1px solid var(--green-border);
+  border-radius:100px;font-size:0.78rem;font-weight:600;color:var(--green);
+  letter-spacing:0.04em;
+}
+.hero-name{
+  font-family:var(--font-display);
+  font-size:clamp(3rem,5.5vw,5rem);font-weight:800;
+  color:var(--white);letter-spacing:-0.03em;line-height:1.05;margin-bottom:1.2rem;
+}
+.hero-name .accent{color:var(--green)}
+.hero-desc{font-size:1.05rem;color:var(--gray);line-height:1.8;max-width:480px;margin-bottom:2.2rem}
+.hero-desc strong{color:var(--silver);font-weight:500}
+.hero-btns{display:flex;gap:0.85rem;flex-wrap:wrap;margin-bottom:3rem}
+.btn-primary{
+  padding:0.8rem 1.8rem;background:var(--green);color:var(--dark);
+  border-radius:6px;font-weight:700;font-size:0.9rem;letter-spacing:0.02em;
+  transition:opacity var(--transition),transform var(--transition);
+}
+.btn-primary:hover{opacity:0.88;transform:translateY(-2px)}
+.btn-secondary{
+  padding:0.8rem 1.8rem;border:1px solid var(--border);
+  color:var(--silver);border-radius:6px;font-weight:500;font-size:0.9rem;
+  transition:border-color var(--transition),color var(--transition);display:flex;align-items:center;gap:0.5rem;
+}
+.btn-secondary:hover{border-color:var(--green);color:var(--white)}
+.hero-pills{display:flex;flex-wrap:wrap;gap:0.5rem}
+.hero-pill{
+  padding:0.3rem 0.8rem;background:var(--panel);border:1px solid var(--border2);
+  border-radius:100px;font-size:0.75rem;color:var(--gray);font-weight:500;
+}
+
+/* Terminal Card */
+.terminal{
+  background:var(--panel);border:1px solid var(--border);
+  border-radius:10px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.4);
+}
+.t-bar{
+  display:flex;align-items:center;gap:0.5rem;
+  padding:0.75rem 1rem;background:var(--panel2);border-bottom:1px solid var(--border2);
+}
+.t-dot{width:12px;height:12px;border-radius:50%}
+.t-r{background:#ff5f57}.t-y{background:#febc2e}.t-g{background:#28c840}
+.t-file{margin-left:auto;font-size:0.72rem;color:var(--muted);font-family:monospace}
+.t-body{padding:1.4rem;font-family:'Courier New',monospace;font-size:0.82rem;line-height:2}
+.tc{color:#4a5568}.tk{color:var(--gray)}.ts{color:var(--green)}
+.tn{color:var(--orange)}.tb{color:var(--muted)}
+.cursor{display:inline-block;width:8px;height:15px;background:var(--green);animation:blink 1s infinite;vertical-align:middle;margin-left:2px}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* ── ABOUT ── */
+#about{padding:6rem 6%;background:var(--dark);border-top:1px solid var(--border2)}
+.about-wrap{display:grid;grid-template-columns:1.15fr 0.85fr;gap:5rem;align-items:start;max-width:1200px}
+.eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--green);margin-bottom:0.7rem}
+.section-title{font-family:var(--font-display);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:var(--white);letter-spacing:-0.025em;line-height:1.2;margin-bottom:1rem}
+.section-sub{font-size:0.97rem;color:var(--gray);line-height:1.75;max-width:520px;margin-bottom:2.5rem}
+.about-text p{color:var(--gray);line-height:1.85;margin-bottom:1.1rem;font-size:0.96rem}
+.about-text p strong{color:var(--silver);font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.stat{padding:1.1rem;background:var(--panel);border:1px solid var(--border2);border-radius:var(--radius);text-align:center}
+.stat-n{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--green);line-height:1}
+.stat-l{font-size:0.7rem;color:var(--muted);margin-top:0.3rem;line-height:1.3}
+.skill-col{}
+.sg{margin-bottom:1.6rem}
+.sg-label{font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:0.55rem}
+.tags{display:flex;flex-wrap:wrap;gap:0.45rem}
+.tag{
+  padding:0.3rem 0.75rem;background:var(--panel2);border:1px solid var(--border2);
+  color:var(--gray);font-size:0.78rem;font-weight:500;border-radius:5px;
+  transition:border-color var(--transition),color var(--transition);
+}
+.tag:hover{border-color:var(--green-border);color:var(--green)}
+
+/* ── EXPERIENCE ── */
+#experience{padding:6rem 6%;background:var(--black)}
+.exp-inner{max-width:1200px}
+.timeline{margin-top:0}
+.exp-row{
+  display:grid;grid-template-columns:180px 1fr;gap:3rem;
+  padding:2rem 0;border-bottom:1px solid var(--border2);
+}
+.exp-row:first-child{border-top:1px solid var(--border2)}
+.exp-left{}
+.exp-date{font-size:0.78rem;color:var(--gray);margin-bottom:0.4rem;font-weight:500}
+.exp-org{font-size:0.82rem;color:var(--green);font-weight:600}
+.exp-right{}
+.exp-badge{
+  display:inline-block;padding:0.18rem 0.6rem;margin-bottom:0.7rem;
+  background:var(--green-dim);border:1px solid var(--green-border);
+  color:var(--green);font-size:0.68rem;font-weight:700;
+  border-radius:3px;letter-spacing:0.07em;text-transform:uppercase;
+}
+.exp-title{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.8rem}
+.exp-ul{list-style:none;display:flex;flex-direction:column;gap:0.45rem}
+.exp-ul li{font-size:0.88rem;color:var(--gray);padding-left:1.1rem;position:relative;line-height:1.6}
+.exp-ul li::before{content:'▸';position:absolute;left:0;color:var(--green);font-size:0.75rem;top:3px}
+
+/* ── REPOS / PROJECTS ── */
+#projects{padding:6rem 6%;background:var(--dark);border-top:1px solid var(--border2)}
+.projects-inner{max-width:1200px}
+.repo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.2rem}
+.repo-card{
+  background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
+  padding:1.5rem;display:flex;flex-direction:column;gap:0.85rem;
+  transition:border-color var(--transition),transform var(--transition),box-shadow var(--transition);
+  cursor:pointer;position:relative;overflow:hidden;
+}
+.repo-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--green),var(--blue));
+  transform:scaleX(0);transform-origin:left;transition:transform var(--transition);
+}
+.repo-card:hover{border-color:rgba(63,185,80,0.4);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.4)}
+.repo-card:hover::before{transform:scaleX(1)}
+.repo-card-top{display:flex;justify-content:space-between;align-items:flex-start}
+.repo-icon{font-size:1.4rem}
+.repo-links{display:flex;gap:0.5rem}
+.repo-link{
+  display:flex;align-items:center;gap:0.35rem;
+  padding:0.3rem 0.7rem;background:var(--panel2);border:1px solid var(--border2);
+  border-radius:5px;color:var(--gray);font-size:0.73rem;font-weight:600;
+  transition:border-color var(--transition),color var(--transition);
+  letter-spacing:0.03em;
+}
+.repo-link:hover{border-color:var(--green);color:var(--green)}
+.repo-link svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
+.repo-name{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--white);line-height:1.3}
+.repo-desc{font-size:0.85rem;color:var(--gray);line-height:1.65;flex:1}
+.repo-meta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+.repo-lang{display:flex;align-items:center;gap:0.4rem;font-size:0.77rem;color:var(--gray)}
+.lang-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.repo-type{font-size:0.7rem;padding:0.18rem 0.55rem;background:var(--panel2);border:1px solid var(--border2);border-radius:3px;color:var(--muted);font-weight:600;letter-spacing:0.05em;text-transform:uppercase}
+
+/* ── CERTS ── */
+#certifications{padding:6rem 6%;background:var(--black)}
+.certs-inner{max-width:1200px}
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.cert{
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:1.2rem 1.4rem;background:var(--panel);border:1px solid var(--border2);border-radius:var(--radius);
+  transition:border-color var(--transition);
+}
+.cert:hover{border-color:var(--green-border)}
+.cert-ico{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+.cert-name{font-size:0.88rem;font-weight:600;color:var(--silver);margin-bottom:0.2rem;line-height:1.35}
+.cert-src{font-size:0.75rem;color:var(--muted)}
+
+/* ── CONTACT ── */
+#contact{padding:6rem 6%;background:var(--dark);border-top:1px solid var(--border2)}
+.contact-inner{max-width:1200px;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.contact-links{display:flex;flex-direction:column;gap:0.75rem;margin-top:0.5rem}
+.cl{
+  display:flex;align-items:center;gap:1rem;
+  padding:0.9rem 1.1rem;background:var(--panel);border:1px solid var(--border2);
+  border-radius:var(--radius);transition:border-color var(--transition),transform var(--transition);
+}
+.cl:hover{border-color:var(--green-border);transform:translateX(4px)}
+.cl-ico{font-size:1.15rem}
+.cl-lbl{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em}
+.cl-val{font-size:0.9rem;color:var(--silver);font-weight:500}
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fg{display:flex;flex-direction:column;gap:0.35rem}
+.fg label{font-size:0.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em}
+.fg input,.fg textarea{
+  padding:0.8rem 1rem;background:var(--panel);border:1px solid var(--border2);
+  border-radius:6px;font-family:var(--font-body);font-size:0.9rem;color:var(--silver);outline:none;
+  transition:border-color var(--transition);
+}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--muted)}
+.fg input:focus,.fg textarea:focus{border-color:var(--green)}
+.fg textarea{resize:vertical;min-height:115px}
+.btn-send{
+  padding:0.85rem 1.8rem;background:var(--green);color:var(--dark);
+  border:none;border-radius:6px;font-family:var(--font-display);font-size:0.92rem;font-weight:700;
+  cursor:pointer;align-self:flex-start;letter-spacing:0.03em;
+  transition:opacity var(--transition),transform var(--transition);
+}
+.btn-send:hover{opacity:0.88;transform:translateY(-2px)}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--dark);border-top:1px solid var(--border2);
+  padding:1.75rem 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+}
+.footer-logo{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--white)}
+.footer-logo span{color:var(--green)}
+footer p{font-size:0.8rem;color:var(--muted)}
+
+/* ── ANIMATIONS ── */
+.fade{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade.show{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr}.terminal{display:none}
+  .about-wrap{grid-template-columns:1fr;gap:3rem}
+  .contact-inner{grid-template-columns:1fr;gap:3rem}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .exp-row{grid-template-columns:1fr;gap:0.5rem}
+  .nav-links{display:none}
+  .frow{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  nav{padding:0 4%}
+  #home,#about,#experience,#projects,#certifications,#contact{padding-left:4%;padding-right:4%}
+  footer{padding-left:4%;padding-right:4%}
+  .repo-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-logo"><span class="nav-logo-dot"></span>ZM</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://github.com/2001060901" target="_blank" class="nav-gh">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      GitHub
+    </a>
+    <a href="Zwelihle_Mbhamali_CV.pdf" download class="nav-cv">Download CV</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;display:inline-block"></span>
+        Open to opportunities · Johannesburg, SA
+      </div>
+      <h1 class="hero-name">Zwelihle<br><span class="accent">Mbhamali.</span></h1>
+      <p class="hero-desc">
+        <strong>SEO Developer · Web Developer · Data Analyst</strong><br>
+        BCom MIS graduate turning data and code into digital experiences that rank, perform, and convert. Currently building at <strong>Rhiza Babuyile</strong>.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="https://github.com/2001060901" target="_blank" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub Profile
+        </a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+      <div class="hero-pills">
+        <span class="hero-pill">Python</span><span class="hero-pill">JavaScript</span>
+        <span class="hero-pill">SQL</span><span class="hero-pill">SEO</span>
+        <span class="hero-pill">Data Analytics</span><span class="hero-pill">HTML & CSS</span>
+      </div>
+    </div>
+    <div class="terminal">
+      <div class="t-bar">
+        <div class="t-dot t-r"></div><div class="t-dot t-y"></div><div class="t-dot t-g"></div>
+        <span class="t-file">zwelihle.json</span>
+      </div>
+      <div class="t-body">
+        <span class="tc">// Zwelihle Mbhamali</span><br>
+        <span class="tb">{</span><br>
+        &nbsp;&nbsp;<span class="tk">"role"</span>: <span class="ts">"SEO Developer"</span>,<br>
+        &nbsp;&nbsp;<span class="tk">"location"</span>: <span class="ts">"Johannesburg, ZA"</span>,<br>
+        &nbsp;&nbsp;<span class="tk">"degree"</span>: <span class="ts">"BCom MIS"</span>,<br>
+        &nbsp;&nbsp;<span class="tk">"employer"</span>: <span class="ts">"Rhiza Babuyile"</span>,<br>
+        &nbsp;&nbsp;<span class="tk">"github"</span>: <span class="ts">"2001060901"</span>,<br>
+        &nbsp;&nbsp;<span class="tk">"skills"</span>: [<span class="ts">"SEO"</span>,<span class="ts">"Python"</span>,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ts">"SQL"</span>,<span class="ts">"Data Analytics"</span>],<br>
+        &nbsp;&nbsp;<span class="tk">"available"</span>: <span class="tn">true</span><br>
+        <span class="tb">}</span><span class="cursor"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="about-wrap fade">
+    <div>
+      <p class="eyebrow">About Me</p>
+      <h2 class="section-title">Developer with a data-driven edge</h2>
+      <div class="about-text">
+        <p>I'm a <strong>BCom Management Information Systems graduate</strong> from the University of Zululand, currently working as an <strong>SEO Developer Trainee at Rhiza Babuyile</strong> in Johannesburg.</p>
+        <p>I recently completed a <strong>Data Science & Analytics internship at Future Interns</strong>, gaining practical experience with real business datasets and analytical decision-making. I also spent a year tutoring first-year university students in computer literacy.</p>
+        <p>Trilingual in <strong>English, IsiZulu, and SiSwati</strong> — I bring both technical depth and strong communication skills to every project.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="stat-n">5+</div><div class="stat-l">Certifications</div></div>
+        <div class="stat"><div class="stat-n">3</div><div class="stat-l">Languages spoken</div></div>
+        <div class="stat"><div class="stat-n">73%</div><div class="stat-l">Final year avg</div></div>
+        <div class="stat"><div class="stat-n">6+</div><div class="stat-l">GitHub repos</div></div>
+      </div>
+    </div>
+    <div class="skill-col">
+      <div class="sg"><div class="sg-label">SEO & Digital</div><div class="tags"><span class="tag">SEO Fundamentals</span><span class="tag">Keyword Research</span><span class="tag">On-Page SEO</span><span class="tag">Technical SEO</span><span class="tag">Search Rankings</span></div></div>
+      <div class="sg"><div class="sg-label">Programming & Web</div><div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span></div></div>
+      <div class="sg"><div class="sg-label">Data & Databases</div><div class="tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Data Analytics</span><span class="tag">Systems Analysis</span></div></div>
+      <div class="sg"><div class="sg-label">Tools</div><div class="tags"><span class="tag">Microsoft Office</span><span class="tag">Technical Docs</span><span class="tag">Business Process Analysis</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section id="experience">
+  <div class="exp-inner fade">
+    <p class="eyebrow">Career</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+
+      <div class="exp-row">
+        <div class="exp-left">
+          <div class="exp-date">May 2026 – Present</div>
+          <div class="exp-org">Rhiza Babuyile</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-badge">Current</div>
+          <div class="exp-title">SEO Developer Trainee</div>
+          <ul class="exp-ul">
+            <li>Assist with website optimisation and SEO implementation across client projects.</li>
+            <li>Conduct keyword research and competitor analysis to inform content strategy.</li>
+            <li>Monitor website performance metrics and search rankings using SEO tools.</li>
+            <li>Support technical and on-page SEO activities to improve organic visibility.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-left">
+          <div class="exp-date">Apr 2026 – May 2026</div>
+          <div class="exp-org">Future Interns</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-badge">Remote Internship</div>
+          <div class="exp-title">Data Science & Analytics Intern</div>
+          <ul class="exp-ul">
+            <li>Completed a Data Science and Analytics internship programme.</li>
+            <li>Developed practical skills in data analytics and data-driven decision-making.</li>
+            <li>Worked with business datasets and applied real-world analytical concepts.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-left">
+          <div class="exp-date">Feb 2023 – Nov 2023</div>
+          <div class="exp-org">University of Zululand</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-badge">Part-Time</div>
+          <div class="exp-title">Computer Literacy Tutor</div>
+          <ul class="exp-ul">
+            <li>Tutored first-year students in Microsoft Office, internet usage, and computer literacy.</li>
+            <li>Helped learners build essential digital skills for academic and career readiness.</li>
+            <li>Developed strong communication, monitoring, and mentoring capabilities.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECTS / REPOS ═══ -->
+<section id="projects">
+  <div class="projects-inner fade">
+    <p class="eyebrow">Portfolio & GitHub</p>
+    <h2 class="section-title">Projects & Repositories</h2>
+    <p class="section-sub">Click any card to open the repository on GitHub or view the live site.</p>
+    <div class="repo-grid">
+
+      <!-- Student Profile -->
+      <div class="repo-card" onclick="window.open('https://github.com/2001060901/Student-Profile','_blank')">
+        <div class="repo-card-top">
+          <div class="repo-icon">🎓</div>
+          <div class="repo-links">
+            <a href="https://github.com/2001060901/Student-Profile" target="_blank" class="repo-link" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Repo
+            </a>
+          </div>
+        </div>
+        <div class="repo-name">Student-Profile</div>
+        <div class="repo-desc">Student profile management system — tracking academic records, personal information, and performance data using structured database design.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+          <span class="repo-type">Academic</span>
+        </div>
+      </div>
+
+      <!-- Future DS -->
+      <div class="repo-card" onclick="window.open('https://github.com/2001060901/FUTURE_DS_01','_blank')">
+        <div class="repo-card-top">
+          <div class="repo-icon">📊</div>
+          <div class="repo-links">
+            <a href="https://github.com/2001060901/FUTURE_DS_01" target="_blank" class="repo-link" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Repo
+            </a>
+          </div>
+        </div>
+        <div class="repo-name">FUTURE_DS_01</div>
+        <div class="repo-desc">Data Science internship project from Future Interns — data analytics, pattern recognition, and business insights from real-world datasets.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span>Python</span>
+          <span class="repo-type">Data Science</span>
+        </div>
+      </div>
+
+      <!-- AI Workplace -->
+      <div class="repo-card" onclick="window.open('https://github.com/2001060901/AI-Workplace-Productivity-Assistant','_blank')">
+        <div class="repo-card-top">
+          <div class="repo-icon">🤖</div>
+          <div class="repo-links">
+            <a href="https://github.com/2001060901/AI-Workplace-Productivity-Assistant" target="_blank" class="repo-link" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Repo
+            </a>
+          </div>
+        </div>
+        <div class="repo-name">AI Workplace Productivity Assistant</div>
+        <div class="repo-desc">An AI-powered assistant designed to boost workplace productivity — automating repetitive tasks and streamlining workflows using intelligent tools.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+          <span class="repo-type">AI / Productivity</span>
+        </div>
+      </div>
+
+      <!-- Project 233 -->
+      <div class="repo-card" onclick="window.open('https://github.com/2001060901/Project.233','_blank')">
+        <div class="repo-card-top">
+          <div class="repo-icon">🛠️</div>
+          <div class="repo-links">
+            <a href="https://github.com/2001060901/Project.233" target="_blank" class="repo-link" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Repo
+            </a>
+          </div>
+        </div>
+        <div class="repo-name">Project.233</div>
+        <div class="repo-desc">A development project exploring web technologies, systems logic, and applied programming concepts built during studies.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#e34c26"></span>HTML</span>
+          <span class="repo-type">Web Dev</span>
+        </div>
+      </div>
+
+      <!-- Workplace AI Pal -->
+      <div class="repo-card" onclick="window.open('https://github.com/2001060901/workplace-ai-pal-62','_blank')">
+        <div class="repo-card-top">
+          <div class="repo-icon">💼</div>
+          <div class="repo-links">
+            <a href="https://github.com/2001060901/workplace-ai-pal-62" target="_blank" class="repo-link" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Repo
+            </a>
+          </div>
+        </div>
+        <div class="repo-name">workplace-ai-pal-62</div>
+        <div class="repo-desc">An AI companion tool for workplace environments — helping teams manage tasks, improve communication, and boost daily productivity.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+          <span class="repo-type">AI / Tools</span>
+        </div>
+      </div>
+
+      <!-- Portfolio -->
+      <div class="repo-card" onclick="window.open('https://github.com/2001060901/zwelihle.github.io','_blank')">
+        <div class="repo-card-top">
+          <div class="repo-icon">🌐</div>
+          <div class="repo-links">
+            <a href="https://github.com/2001060901/zwelihle.github.io" target="_blank" class="repo-link" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Repo
+            </a>
+            <a href="https://zwelihle.github.io" target="_blank" class="repo-link" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              Live
+            </a>
+          </div>
+        </div>
+        <div class="repo-name">zwelihle.github.io</div>
+        <div class="repo-desc">This portfolio website — built from scratch with HTML, CSS, and JavaScript. Fully responsive, SEO-optimised, and hosted free on GitHub Pages.</div>
+        <div class="repo-meta">
+          <span class="repo-lang"><span class="lang-dot" style="background:#e34c26"></span>HTML / CSS</span>
+          <span class="repo-type">Portfolio</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section id="certifications">
+  <div class="certs-inner fade">
+    <p class="eyebrow">Credentials</p>
+    <h2 class="section-title">Certifications</h2>
+    <p class="section-sub">Industry-recognised qualifications backing up the work.</p>
+    <div class="certs-grid">
+      <div class="cert"><div class="cert-ico">🗄️</div><div><div class="cert-name">SQL and Relational Databases</div><div class="cert-src">Database design, queries & management</div></div></div>
+      <div class="cert"><div class="cert-ico">🌐</div><div><div class="cert-name">Cisco Networking Essentials</div><div class="cert-src">Networking, IP addressing & security basics</div></div></div>
+      <div class="cert"><div class="cert-ico">📊</div><div><div class="cert-name">Data Science and Analytics</div><div class="cert-src">Future Interns — Applied analytics programme</div></div></div>
+      <div class="cert"><div class="cert-ico">📐</div><div><div class="cert-name">Introduction to Data Concepts</div><div class="cert-src">Fundamentals of data structures and usage</div></div></div>
+      <div class="cert"><div class="cert-ico">🔐</div><div><div class="cert-name">Introduction to Cybersecurity</div><div class="cert-src">Core security principles and threat awareness</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="contact-inner fade">
+    <div>
+      <p class="eyebrow">Let's Connect</p>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">Open to full-time roles, freelance projects, and remote opportunities across South Africa.</p>
+      <div class="contact-links">
+        <a href="tel:0606200803" class="cl"><span class="cl-ico">📞</span><div><div class="cl-lbl">Phone</div><div class="cl-val">060 620 0803</div></div></a>
+        <a href="mailto:zwelizwelihle06@gmail.com" class="cl"><span class="cl-ico">✉️</span><div><div class="cl-lbl">Email</div><div class="cl-val">zwelizwelihle06@gmail.com</div></div></a>
+        <a href="https://github.com/2001060901" target="_blank" class="cl"><span class="cl-ico">🐙</span><div><div class="cl-lbl">GitHub</div><div class="cl-val">github.com/2001060901</div></div></a>
+        <a href="#" class="cl"><span class="cl-ico">💼</span><div><div class="cl-lbl">LinkedIn</div><div class="cl-val">Add your LinkedIn URL here</div></div></a>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <div class="frow">
+        <div class="fg"><label>Name</label><input type="text" placeholder="Your name" required></div>
+        <div class="fg"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
+      </div>
+      <div class="fg"><label>Subject</label><input type="text" placeholder="Job opportunity / Project / Collaboration"></div>
+      <div class="fg"><label>Message</label><textarea placeholder="Tell me about the opportunity..." required></textarea></div>
+      <button type="submit" class="btn-send">Send Message →</button>
+    </form>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-logo">ZM<span>.</span></div>
+  <p>© 2026 · Zwelihle Mbhamali · Johannesburg, South Africa</p>
+  <p>Built with HTML, CSS & JS · Hosted on GitHub Pages</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show'); });
+  }, {threshold: 0.07});
+  document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+  // Contact form
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-send');
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = '#238636';
+    setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; e.target.reset(); }, 3000);
+  }
+</script>
+</body>
+</html>
